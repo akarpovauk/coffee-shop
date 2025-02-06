@@ -1,17 +1,18 @@
 import './menu.scss';
+import '../../assets/scss/fonts.scss';
 
 const Menu = () => {
 	return (
 		<nav className="menu">
-			<ul className="menu__list">
+			<ul className="menu-list">
 				<li className="menu-item">
-					<button className="menu-link">Coffee house</button>
+					<button className="menu-font menu-link">Coffee house</button>
 				</li>
 				<li className="menu-item">
-					<button className="menu-link">Our coffee</button>
+					<button className="menu-font menu-link">Our coffee</button>
 				</li>
 				<li className="menu-item">
-					<button className="menu-link">For your pleasure</button>
+					<button className="menu-font menu-link">For your pleasure</button>
 				</li>
 			</ul>
 		</nav>

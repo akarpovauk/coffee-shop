@@ -1,0 +1,28 @@
+@import '../../assets/scss/variables.scss';
+
+.header {
+	position: absolute;
+	color: $color-main-light;
+	width: 355px;
+	height: 40px;
+	top: 40px;
+	left: 148px;
+	.menu {
+		&-link {
+			color: $color-main-light;
+		}
+		&-list {
+			&:first-child {
+				&::before {
+					content: url(../../assets/logo/logo.svg);
+				}
+			}
+		}
+		button {
+			&:hover, &:active {
+				border: 2px solid rgba(0, 0, 0, 0);
+				border-bottom: 1px solid $color-main-light;
+			}
+		}
+	}
+}

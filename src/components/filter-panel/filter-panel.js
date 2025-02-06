@@ -2,18 +2,18 @@ import './filter-panel.scss';
 
 const FilterPanel = () => {
 	return (
-		<div className="filter">
-			<div className="label">Or filter</div>
+		<div className="filters-block">
+			<div className="label label_filter">Or filter</div>
 			<div className="btn-group">
 				<button 
 					type ='button'
-					className="btn">Brazil</button>
+					className="btn btn_filter">Brazil</button>
 				<button 
 					type ='button'
-					className="btn">Kenya</button>
+					className="btn btn_filter">Kenya</button>
 				<button 
 					type='button'
-					className="btn">Columbia</button>
+					className="btn btn_filter">Columbia</button>
 			</div>
 		</div>
 	);

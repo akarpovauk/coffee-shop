@@ -1,0 +1,47 @@
+@import '../../assets/scss/variables.scss';
+@import '../../assets/scss/fonts.scss';
+@import '../../assets/scss/btns.scss';
+
+.main {
+	color: $color-main-light;
+	text-align: center;
+	&_1 {
+		min-height: 640px;
+		padding-top: 170px;
+		background: url('../../assets/bg/bg_main.jpeg') center/cover  no-repeat;
+	}
+	&_2 {
+		min-height: 260px;
+		background: url('../../assets/bg/bg_our-coffee.jpeg') center/cover  no-repeat;
+		padding-top: 130px;
+	}
+	&_3 {
+		min-height: 260px;
+		background: url('../../assets/bg/bg_for_your_pleasure.jpeg') center/cover  no-repeat;
+		padding-top: 130px;
+	}
+	.content {
+		width: 700px;
+		margin: 0 auto;
+		.divider {
+			margin-top: 8px;
+		}
+		.more {
+			margin-top: 10px;
+			// text-align: center;
+			.subtitle {
+				margin-top: 20px;
+			}
+			.link {
+				margin-top: 20px;
+				text-decoration: none;
+			}
+			.btn {
+				&:hover {
+					background-color:rgba(255, 255, 255, 0.2);
+				}
+			}
+		}
+	}
+}
+
