@@ -6,7 +6,14 @@ import CardItem from '../card-item/card-item';
 
 import './cards.scss';
 
-const Cards = () => {
+const Cards = ({cardContent}) => {
+
+	const cards = cardContent.map(item => {
+		return (
+			<CardItem {...item}/>
+		)
+	})
+
 	return(
 		<section className="cards cards_1">
 			<div className="container">
@@ -17,53 +24,13 @@ const Cards = () => {
 				<div className="title-wrapper">
 					<h2 className="section-title">Our best</h2>
 				</div>
+
 				<div className="cards-wrapper">
-					<CardItem/>
-					<CardItem/>
-					<CardItem/>
+					{cards}
 				</div>
+
 			</div>
 		</section>
-
-		// <section className="cards cards_2">
-		// 	<div className="container">
-		// 		<div className="panel">
-		// 			<SearchPanel/>
-		// 			<FilterPanel/>
-		// 		</div>
-		// 		<div className="title-wrapper">
-		// 			<h2 className="section-title">Our best</h2>
-		// 		</div>
-		// 		<div className="cards-wrapper">
-		// 			<CardItem/>
-		// 			<CardItem/>
-		// 			<CardItem/>
-		// 			<CardItem/>
-		// 			<CardItem/>
-		// 			<CardItem/>
-		// 		</div>
-		// 	</div>
-		// </section>
-
-		// <section className="cards cards_3">
-		// 	<div className="container">
-		// 		<div className="panel">
-		// 			<SearchPanel/>
-		// 			<FilterPanel/>
-		// 		</div>
-		// 		<div className="title-wrapper">
-		// 			<h2 className="section-title">Our best</h2>
-		// 		</div>
-		// 		<div className="cards-wrapper">
-		// 			<CardItem/>
-		// 			<CardItem/>
-		// 			<CardItem/>
-		// 			<CardItem/>
-		// 			<CardItem/>
-		// 			<CardItem/>
-		// 		</div>
-		// 	</div>
-		// </section>
 	);
 }
 

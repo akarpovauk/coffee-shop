@@ -5,28 +5,26 @@
 .main {
 	color: $color-main-light;
 	text-align: center;
+	.content {
+		width: 700px;
+		margin: 0 auto;
+	}
+	.divider {
+		display: none;
+	}
+	.more {
+		display: none;
+	}
 	&_1 {
 		min-height: 640px;
 		padding-top: 170px;
 		background: url('../../assets/bg/bg_main.jpeg') center/cover  no-repeat;
-	}
-	&_2 {
-		min-height: 260px;
-		background: url('../../assets/bg/bg_our-coffee.jpeg') center/cover  no-repeat;
-		padding-top: 130px;
-	}
-	&_3 {
-		min-height: 260px;
-		background: url('../../assets/bg/bg_for_your_pleasure.jpeg') center/cover  no-repeat;
-		padding-top: 130px;
-	}
-	.content {
-		width: 700px;
-		margin: 0 auto;
 		.divider {
+			display: block;
 			margin-top: 8px;
 		}
 		.more {
+			display: block;
 			margin-top: 10px;
 			// text-align: center;
 			.subtitle {
@@ -42,6 +40,17 @@
 				}
 			}
 		}
+	}
+	&_2 {
+		min-height: 260px;
+		background: url('../../assets/bg/bg_our-coffee.jpeg') center/cover  no-repeat;
+		padding-top: 130px;
+
+	}
+	&_3 {
+		min-height: 260px;
+		background: url('../../assets/bg/bg_for_your_pleasure.jpeg') center/cover  no-repeat;
+		padding-top: 130px;
 	}
 }
 
