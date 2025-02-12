@@ -2,14 +2,18 @@ import assets from '../../assets/assets';
 
 import './main.scss';
 
-const Main = ({mainH1}) => {
+const Main = ({pageContent, pageNum}) => {
+
+	let classNames = "main";
+	classNames += ` ${classNames}_${pageNum}`;
+
 	return (
-		<section className="main main_1" data-tab='1'>
+		<section className={classNames}>
 			<div className="container">
 
 				<div className="content">
 					<h1 className="title">
-						{mainH1[0].h1}
+						{pageContent.h1}
 					</h1>
 					<div className="divider">
 						<img src={assets['beans_w.svg']}

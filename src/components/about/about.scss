@@ -22,6 +22,9 @@
 		.divider {
 			margin-top: 15px;
 		}
+		.text {
+			display: none;
+		}
 	}
 	&_1 {
 		padding-bottom: 80px;
@@ -30,6 +33,9 @@
 		}
 		.divider-line {
 			display: none;
+		}
+		.text_1 {
+			display: block;
 		}
 	}
 	&_2 {
@@ -43,6 +49,9 @@
 		.about__info {
 			width: 346px;
 		}
+		.text_2 {
+			display: block;
+		}
 	}
 	&_3 {
 		.image {
@@ -54,6 +63,9 @@
 		}
 		.about__info {
 			width: 326px;
+		}
+		.text_3 {
+			display: block;
 		}
 	}
 	&_it {

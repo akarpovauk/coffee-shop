@@ -1,10 +1,10 @@
 import Menu from '../menu/menu';
 import './header.scss';
 
-const Header = () => {
+const Header = ({onMenuClick}) => {
 	return (
 		<div className="header">
-			<Menu/>
+			<Menu onMenuClick = {onMenuClick}/>
 		</div>
 	);
 }

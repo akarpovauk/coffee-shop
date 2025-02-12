@@ -1,4 +1,4 @@
-import assets from '../../assets/assets';
+// import assets from '../../assets/assets';
 import '../search-panel/search-panel';
 import SearchPanel from '../search-panel/search-panel';
 import FilterPanel from '../filter-panel/filter-panel';
@@ -6,20 +6,26 @@ import CardItem from '../card-item/card-item';
 
 import './cards.scss';
 
-const Cards = ({cardContent}) => {
+const Cards = ({cardContent, pageNum, onUpdateSearch, filter, onFilterSelect}) => {
 
-	const cards = cardContent.map(item => {
+	let classNames = "cards";
+	classNames += ` ${classNames}_${pageNum}`;
+
+	const cards = cardContent.map((item) => {
+		const {id, ...itemProps} = item
 		return (
-			<CardItem {...item}/>
+			<CardItem key ={id} {...itemProps}/>
 		)
 	})
 
+
 	return(
-		<section className="cards cards_1">
+		<section className={classNames}>
 			<div className="container">
 				<div className="panel">
-					<SearchPanel/>
-					<FilterPanel/>
+					<SearchPanel onUpdateSearch = {onUpdateSearch}/>
+					<FilterPanel filter = {filter}
+						onFilterSelect= {onFilterSelect}/>
 				</div>
 				<div className="title-wrapper">
 					<h2 className="section-title">Our best</h2>

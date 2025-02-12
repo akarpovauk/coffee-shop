@@ -4,20 +4,25 @@ import AboutIt from './about-it';
 
 import './about.scss';
 
-const About = ({title}) => {
+const About = ({pageContent, pageNum}) => {
+	let classNames = "about";
+	let id = 'about';
+	classNames += ` ${classNames}_${pageNum}`;
+	id += `_${pageNum}`;
+
 	return (
-		<section className="about about_1" data-tab ='1' id='about_1'>
+		<section className={classNames} id={id}>
 			<div className="wrapper">
 				<div className="image"></div>
 				<div className="about__info">
-					<h2 className="section-title">{title[0].title}</h2>
+					<h2 className="section-title">{pageContent.aboutTitle}</h2>
 					<div className="divider">
 							<img src={assets['beans_b.svg']}
 							alt="coffe beans icon" 
 							className="divider__img" />
 					</div>
 
-					<p className="text">
+					<p className="text text_1">
 						Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
 						Afraid at highly months do things on at. Situation recommend objection do intention 
 						<br/>
@@ -32,7 +37,7 @@ const About = ({title}) => {
 						repair day ladies now.
 					</p>
 
-					{/* <p className="text">
+					<p className="text text_2">
 						Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
 						<br/><br/>
 						Afraid at highly months do things on at. Situation recommend objection do intention
@@ -40,9 +45,9 @@ const About = ({title}) => {
 						As greatly removed calling pleased improve an. Last ask him cold feel <br />
 						met spot shy want. Children me laughing we prospect answered followed. At it went
 						is song that held help face.
-					</p> */}
+					</p>
 
-					{/* <p className="text">
+					<p className="text text_3">
 						Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
 						<br/><br/>
 						Afraid at highly months do things on at. Situation recommend objection do intention <br />
@@ -50,7 +55,7 @@ const About = ({title}) => {
 						As greatly removed calling pleased improve an. Last ask him cold feel <br />
 						met spot shy want. Children me laughing we prospect answered followed. At it went <br />
 						is song that held help face.
-					</p> */}
+					</p>
 					
 				</div>
 			</div>
